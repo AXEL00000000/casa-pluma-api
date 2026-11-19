@@ -1,0 +1,17 @@
+IdProducto,Producto,Lote,Presentacion,Categoria,Precio,VidaUtilDias,StockActual,StockMinimo,FechaTostado,FechaActualizacion
+CP-001,La Soledad · grano 250 g,La Soledad,250 g,Grano,260,45,9,12,2026-11-12,2026-11-18
+CP-002,La Soledad · molido 250 g,La Soledad,250 g,MOLIDO,260,30,18,10,2026-11-09,2026-11-18
+CP-003,La Soledad · grano 1 kg,La Soledad,1 kg,Grano,880,60,7,4,2026-11-06,2026-11-18
+CP-004,El Mirador · grano 250 g,El Mirador,250 g,grano ,240,45,30,10,2026-11-14,2026-11-18
+CP-005,El Mirador · molido 250 g,El Mirador,250 g,Molido,240,30,0,8,2026-10-29,2026-11-18
+ cp-006,El Mirador · grano 1 kg,El Mirador,1 kg,Grano,820,60,14,3,2026-10-24,2026-11-18
+CP-007,Cerro Verde · grano 250 g,Cerro Verde,250 g,Grano,$290,45,6,8,2026-11-11,2026-11-18
+CP-008,Cerro Verde · molido 250 g,Cerro Verde,250 g,Molido,290,30,26,6,2026-10-31,2026-11-18
+CP-009,Cerro Verde · grano 1 kg,Cerro Verde,1 kg,Grano,980,60,5,2,2026-11-10,2026-11-18
+CP-010,Los Naranjos · grano 250 g,Los Naranjos,250 g,Grano,250,45,12,8,13/11/2026,2026-11-18
+CP-011,Los Naranjos · molido 250 g,Los Naranjos,250 g,Molido,250,30,,8,2026-11-08,2026-11-18
+CP-012,Los Naranjos · grano 1 kg,Los Naranjos,1 kg,Grano,850,60,6,3,2026-11-04,2026-11-18
+CP-013,Prensa francesa 600 ml,,Pieza,Accesorio,520,,4,3,,2026-11-18
+CP-014,Filtros V60 · 100 pzas,,Paquete,Accesorio,180,,9,6,,2026-11-18
+CP-015,Taza de barro negro,,Pieza,Accesorio,140,,22,6,,2026-11-18
+CP-004,El Mirador · grano 250 g,El Mirador,250 g,Grano,240,45,-4,10,2026-11-06,2026-11-12
