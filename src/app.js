@@ -12,6 +12,7 @@ app.use(express.json({ limit: "1mb" }));
 app.use("/api/v1/health", require("./routes/health.routes"));
 app.use("/api/v1/auth", require("./routes/auth.routes"));
 app.use("/api/v1/productos", require("./routes/productos.routes"));
+app.use("/api/v1/pedidos", require("./routes/pedidos.routes"));
 // Módulo de apoyo a la toma de decisiones (desarrollado para DSTD)
 app.use("/api/v1/etl", require("./routes/etl.routes"));
 app.use("/api/v1/dss", require("./routes/dss.routes"));

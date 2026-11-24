@@ -48,6 +48,9 @@ async function ejecutarEtl({ usuario = "cli", carpeta } = {}) {
   try {
     await client.query("BEGIN");
     await client.query("TRUNCATE ventas, reposicion, inventario, productos");
+    // Los pedidos simulados de la tienda se descartan junto con sus ventas al recargar los datos de prueba
+    const { rows: [t] } = await client.query("SELECT to_regclass('pedidos') IS NOT NULL AS existe");
+    if (t.existe) await client.query("TRUNCATE pedidos RESTART IDENTITY");
     await insertar(client, "productos", datos.productos, ["id_producto", "nombre", "lote", "presentacion", "categoria", "precio", "vida_util_dias"]);
     await insertar(client, "inventario", datos.inventario, ["id_producto", "stock_actual", "stock_minimo", "fecha_tostado", "fecha_actualizacion"]);
     await insertar(client, "ventas", datos.ventas, ["id_venta", "id_producto", "fecha", "cantidad", "canal"]);

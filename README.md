@@ -27,7 +27,7 @@ Requiere Node.js 20 o más reciente.
 
 ```sh
 npm install
-npm run db:init   # crea las tablas y el usuario admin
+npm run db:init   # crea las tablas y el usuario admin (volver a correrlo al actualizar: agrega la tabla pedidos)
 npm run etl       # Extract → Transform → Validate → Load (también se puede desde el front)
 npm run dev       # http://localhost:3000
 ```
@@ -41,6 +41,8 @@ npm run dev       # http://localhost:3000
 | GET | `/api/v1/health` | público | Estado del servicio |
 | POST | `/api/v1/auth/login` | público | `{ usuario, password }` → `{ accessToken, usuario }` |
 | GET | `/api/v1/productos` | público | Catálogo de la tienda |
+| POST | `/api/v1/pedidos` | público | Pedido simulado `{ cliente?, partidas: [{ idProducto, cantidad }] }`: valida existencias, descuenta inventario y registra ventas del canal Web |
+| GET | `/api/v1/pedidos` | sesión | Últimos pedidos registrados |
 | POST | `/api/v1/etl/ejecutar` | admin, inventario | Ejecuta el ETL completo y devuelve el reporte |
 | GET | `/api/v1/etl/ultima` | sesión | Última ejecución: conteos, transformaciones, validaciones, rechazados y en revisión |
 | GET | `/api/v1/etl/fuentes/:nombre` | sesión | Fuente original sin transformar (`inventario`, `ventas`, `reposicion`) |

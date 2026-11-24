@@ -75,3 +75,15 @@ CREATE TABLE IF NOT EXISTS etl_incidencias (
     motivo          TEXT NOT NULL,
     accion          TEXT NOT NULL
 );
+
+-- Pedidos de la tienda en línea (simulados). Cada partida se registra también
+-- como venta del canal Web, así la tienda alimenta al módulo de decisiones.
+-- No tiene llave foránea a productos para que el ETL pueda recargar el catálogo.
+CREATE TABLE IF NOT EXISTS pedidos (
+    id          SERIAL PRIMARY KEY,
+    creado_en   TIMESTAMPTZ   NOT NULL DEFAULT NOW(),
+    fecha       DATE          NOT NULL,
+    cliente     VARCHAR(80),
+    total       NUMERIC(10,2) NOT NULL CHECK (total > 0),
+    partidas    JSONB         NOT NULL
+);
